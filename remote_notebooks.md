@@ -14,3 +14,6 @@ ssh -o ExitOnForwardFailure=yes -f -N -L <port>:localhost:<port> remout_user_nam
 
 # download directory with all files
 wget -r -l 1 ftp://ftp.ebi.ac.uk/pub/databases/gwas/releases/latest/*
+
+# kill all pultiprocess from python script
+kill -9 `ps -ef | grep script.py | grep -v grep | awk '{print $2}'`
