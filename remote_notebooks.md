@@ -11,3 +11,6 @@ function jptlab_remote(){
 
 # local port listening
 ssh -o ExitOnForwardFailure=yes -f -N -L <port>:localhost:<port> remout_user_name@remote_server_name
+
+# download directory with all files
+wget -r -l 1 ftp://ftp.ebi.ac.uk/pub/databases/gwas/releases/latest/*
