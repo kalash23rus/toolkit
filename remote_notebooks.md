@@ -26,3 +26,7 @@ pg_dump --file "db_name" --host "ip_host" --port "5432" --username "user_name" -
 
 # dump postrges db
 pg_dump database_name > database_name_file
+
+# split and merge big archive
+    tar -cvvzf <archive-name>.tar.gz /path/to/folder
+    cat archive-name* > test.tar.gz
