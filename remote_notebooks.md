@@ -17,3 +17,12 @@ wget -r -l 1 ftp://ftp.ebi.ac.uk/pub/databases/gwas/releases/latest/*
 
 # kill all pultiprocess from python script
 kill -9 `ps -ef | grep script.py | grep -v grep | awk '{print $2}'`
+ 
+# attach docker container shell
+    docker exec -it container_id bash
+    
+# dump postrges db
+pg_dump --file "db_name" --host "ip_host" --port "5432" --username "user_name" --verbose --role "user_name" --format=c --blobs --compress "8" "db_name"
+
+# dump postrges db
+pg_dump database_name > database_name_file
