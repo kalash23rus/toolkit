@@ -1,0 +1,8 @@
+#!/bin/bash
+
+DBS=("database_name")
+# Loop over each database and run pg_dump
+for DB in "${DBS[@]}"
+do
+	docker exec container_name pg_dump -U user_db_name "$DB" > "$DB.sql"
+done
